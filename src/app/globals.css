@@ -1,0 +1,192 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  color-scheme: dark;
+  --portfolio-bg: #020617;
+  --portfolio-surface: rgba(15, 23, 42, 0.68);
+  --portfolio-border: rgba(148, 163, 184, 0.18);
+  --portfolio-text: #f8fafc;
+  --portfolio-muted: #cbd5e1;
+  --portfolio-soft: #94a3b8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--portfolio-bg);
+  color: var(--portfolio-text);
+}
+
+.light-mode {
+  color-scheme: light;
+  --portfolio-bg: #f8fafc;
+  --portfolio-surface: rgba(255, 255, 255, 0.72);
+  --portfolio-border: rgba(15, 23, 42, 0.12);
+  --portfolio-text: #0f172a;
+  --portfolio-muted: #334155;
+  --portfolio-soft: #64748b;
+}
+
+.portfolio-shell {
+  position: relative;
+  background:
+    radial-gradient(circle at 12% 14%, rgba(34, 211, 238, 0.18), transparent 28rem),
+    radial-gradient(circle at 82% 8%, rgba(168, 85, 247, 0.22), transparent 26rem),
+    radial-gradient(circle at 76% 78%, rgba(56, 189, 248, 0.12), transparent 30rem),
+    var(--portfolio-bg);
+}
+
+.portfolio-shell::before {
+  pointer-events: none;
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.28;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+  background-size: 58px 58px;
+  mask-image: linear-gradient(to bottom, black, transparent 82%);
+}
+
+.section-container {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.glass-panel {
+  border: 1px solid var(--portfolio-border);
+  background: var(--portfolio-surface);
+  box-shadow: 0 24px 80px rgba(2, 6, 23, 0.28);
+  backdrop-filter: blur(20px);
+}
+
+.gradient-text {
+  color: transparent;
+  background: linear-gradient(135deg, #67e8f9, #c084fc 48%, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.light-mode .portfolio-shell {
+  background:
+    radial-gradient(circle at 12% 14%, rgba(6, 182, 212, 0.18), transparent 28rem),
+    radial-gradient(circle at 82% 8%, rgba(147, 51, 234, 0.16), transparent 26rem),
+    #f8fafc;
+  color: var(--portfolio-text);
+}
+
+.light-mode .text-slate-100,
+.light-mode .text-white {
+  color: #0f172a;
+}
+
+.light-mode .text-slate-200,
+.light-mode .text-slate-300,
+.light-mode .text-slate-400 {
+  color: #475569;
+}
+
+.light-mode .bg-slate-950,
+.light-mode .bg-slate-950\/70,
+.light-mode .bg-slate-900,
+.light-mode .bg-slate-900\/70,
+.light-mode .bg-slate-900\/80 {
+  background-color: rgba(255, 255, 255, 0.74);
+}
+
+.light-mode .border-white\/10,
+.light-mode .border-slate-800,
+.light-mode .border-purple-500\/20 {
+  border-color: rgba(15, 23, 42, 0.15);
+}
+
+/* Make backgrounds that were slightly white (in dark mode) slightly dark (in light mode) */
+.light-mode .bg-white\/5 {
+  background-color: rgba(15, 23, 42, 0.05);
+}
+.light-mode .bg-white\/10 {
+  background-color: rgba(15, 23, 42, 0.1);
+}
+.light-mode .bg-white\/15 {
+  background-color: rgba(15, 23, 42, 0.15);
+}
+
+/* Darken accent text colors in light mode for readability */
+.light-mode .text-cyan-200, .light-mode .text-cyan-300, .light-mode .text-cyan-400 {
+  color: #0891b2;
+}
+.light-mode .text-amber-200, .light-mode .text-amber-300, .light-mode .text-amber-400 {
+  color: #d97706;
+}
+.light-mode .text-emerald-200, .light-mode .text-emerald-300, .light-mode .text-emerald-400 {
+  color: #059669;
+}
+.light-mode .text-purple-300, .light-mode .text-purple-400 {
+  color: #7e22ce;
+}
+.light-mode .text-pink-300, .light-mode .text-pink-400, .light-mode .text-rose-400 {
+  color: #e11d48;
+}
+
+/* Make gradient text a bit darker in light mode so it doesn't hurt the eyes */
+.light-mode .bg-clip-text {
+  filter: brightness(0.65) contrast(1.2);
+}
+
+/* Invert solid white buttons to dark in light mode */
+.light-mode .bg-white.text-slate-950 {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+.light-mode .bg-white.text-slate-950:hover {
+  background-color: #1e293b;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -18px, 0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.16), transparent);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
