@@ -30,15 +30,15 @@ const projects = [
     image: "/KeenKeeper.png",
   },
   {
-    title: "Digital Tools Marketplace",
+    title: "EventSphere - Event Management",
     description:
-      "A responsive digital tools buying platform simulating a full e-commerce experience with dynamic cart interactions and toast notifications.",
-    features: ["Dynamic Cart System", "View Toggle System", "Responsive Grid UI"],
-    stack: ["React", "Vite", "Tailwind CSS", "Toastify"],
+      "A state-of-the-art full-stack application for an event management and booking platform. Features advanced filtering, seamless booking, and role-based access control.",
+    features: ["Event Booking & Wishlist", "Admin Analytics Dashboard", "Advanced Search & Filters"],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Recharts"],
     accent: "from-emerald-400/30 via-teal-500/20 to-cyan-500/30",
-    liveLink: "https://digitoolsplatformassi6.netlify.app/",
-    githubLink: "https://github.com/shahrierbiddut/Assi_6_Hero",
-    image: "/DigiTools.png",
+    liveLink: "https://eventsphere-api-client.vercel.app",
+    githubLink: "https://github.com/shahrierbiddut/EventSphere-client",
+    image: "/EventSphere.png",
   },
 ];
 

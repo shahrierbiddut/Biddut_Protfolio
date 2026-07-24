@@ -1,11 +1,11 @@
-import Header from "./Component/Navbar";
-import Hero from "./Component/Hero";
-import About from "./Component/About";
-import TechStack from "./Component/TechStack";
-import Qualification from "./Component/Qualification";
-import Projects from "./Component/Projects";
-import More from "./Component/More";
-import ClientExperience from "./Component/ClientExperience";
+import Header from "@/components/layout/Navbar";
+import Hero from "@/components/home/Hero";
+import About from "@/components/home/About";
+import TechStack from "@/components/home/TechStack";
+import Qualification from "@/components/home/Qualification";
+import Projects from "@/components/home/Projects";
+import More from "@/components/home/More";
+import ClientExperience from "@/components/home/ClientExperience";
 
 export default function Home() {
   return (
