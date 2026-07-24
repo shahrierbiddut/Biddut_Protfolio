@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌟 Biddut's Personal Portfolio
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-15.0.0-black?style=for-the-badge&logo=next.js)
+![React](https://img.shields.io/badge/React-18.2.0-blue?style=for-the-badge&logo=react)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.3.0-38B2AC?style=for-the-badge&logo=tailwind-css)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer)
 
-First, run the development server:
+## 📖 Overview
+
+A modern, animated, and fully responsive personal portfolio website built with Next.js 15, Tailwind CSS v4, and Framer Motion. This portfolio showcases my skills, projects, qualifications, and client experiences in an interactive and visually appealing way.
+
+**🔴 Live Demo:** [https://biddutprotfolio.vercel.app/](https://biddutprotfolio.vercel.app/)
+
+## ✨ Key Features
+
+*   **Modern UI/UX:** Built with the latest Tailwind CSS and DaisyUI components.
+*   **Smooth Animations:** Powered by Framer Motion for scroll reveals and page transitions.
+*   **Fully Responsive:** Optimized for mobile, tablet, and desktop viewing.
+*   **Dynamic Sections:**
+    *   Hero Section (Introduction)
+    *   About Me
+    *   Tech Stack & Skills
+    *   Qualifications & Experience
+    *   Project Showcase
+    *   Client Testimonials / Experience
+    *   Services Offered
+    *   Contact Form
+*   **Authentication (Demo):** Integrated with Better-Auth for secure authentication flows.
+
+## 🛠️ Tech Stack
+
+*   **Frontend Framework:** Next.js 15 (App Router)
+*   **Core Library:** React 18
+*   **Styling:** Tailwind CSS (v4), DaisyUI
+*   **Animations:** Framer Motion
+*   **Icons:** Lucide React, React Icons
+*   **Authentication:** Better-Auth
+*   **Linting:** ESLint
+
+## 🚀 Getting Started
+
+To run this project locally, follow these steps:
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/biddut-portfolio.git
+
+# 2. Navigate into the directory
+cd biddut-portfolio
+
+# 3. Install dependencies
+npm install
+# or yarn install / pnpm install
+
+# 4. Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📁 Folder Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```text
+src/
+├── app/
+│   ├── Component/       # All UI components (Hero, About, Navbar, Projects, etc.)
+│   ├── globals.css      # Global styles & Tailwind configuration
+│   ├── layout.js        # Root layout wrapper
+│   └── page.js          # Main landing page assembling all components
+```
 
-## Learn More
+## 📬 Contact
 
-To learn more about Next.js, take a look at the following resources:
+Let's connect!
+*   **Email:** your.email@example.com
+*   **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/)
+*   **GitHub:** [Your GitHub Profile](https://github.com/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Designed & Developed by Biddut*

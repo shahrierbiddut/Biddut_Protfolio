@@ -15,7 +15,7 @@ import {
   Send,
 } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
-import profileImage from "../../../Assets/profile.png";
+import profileImage from "@/assets/profile.png";
 
 const words = ["Dashboards", "Business Systems", "Conversion-Focused Websites"];
 
@@ -138,7 +138,7 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="#projects"
+              href="/projects"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-300 to-purple-400 px-6 py-3 font-semibold text-slate-950 shadow-xl shadow-cyan-500/20 transition hover:-translate-y-1"
             >
               <BriefcaseBusiness size={18} />
@@ -154,7 +154,7 @@ export default function Hero() {
               View Resume
             </Link>
             <Link
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-purple-300/30 px-6 py-3 font-semibold text-purple-100 transition hover:-translate-y-1 hover:bg-purple-400/10"
             >
               <Send size={18} />
@@ -275,3 +275,4 @@ export default function Hero() {
     </section>
   );
 }
+

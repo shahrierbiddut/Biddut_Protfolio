@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { BsSun, BsMoon } from "react-icons/bs";
 import {
   AiOutlineHome,
@@ -12,20 +13,21 @@ import {
   AiOutlineBars,
   AiOutlineMail,
 } from "react-icons/ai";
-import logo from "../../../Assets/Logo.png";
+import logo from "@/assets/Logo.png";
 
 const navItems = [
-  { href: "#home", label: "Home", icon: AiOutlineHome },
-  { href: "#about", label: "About", icon: AiOutlineUser },
-  { href: "#tech-stack", label: "Tech Stack", icon: AiOutlineCode },
-  { href: "#qualification", label: "Qualification", icon: AiOutlineFileText },
-  { href: "#projects", label: "Projects", icon: AiOutlineProject },
-  { href: "#contact", label: "Contact", icon: AiOutlineMail },
-  { href: "#more", label: "More", icon: AiOutlineBars },
+  { href: "/", label: "Home", icon: AiOutlineHome },
+  { href: "/about", label: "About", icon: AiOutlineUser },
+  { href: "/tech-stack", label: "Tech Stack", icon: AiOutlineCode },
+  { href: "/#qualification", label: "Qualification", icon: AiOutlineFileText },
+  { href: "/projects", label: "Projects", icon: AiOutlineProject },
+  { href: "/contact", label: "Contact", icon: AiOutlineMail },
+  { href: "/#more", label: "More", icon: AiOutlineBars },
 ];
 
 export default function Header() {
   const [isDark, setIsDark] = useState(true);
+  const pathname = usePathname();
 
   useEffect(() => {
     if (localStorage.getItem("theme") === "light") {
@@ -68,9 +70,10 @@ export default function Header() {
           </Link>
 
           <ul className="hidden md:flex items-center gap-1 list-none m-0 p-1.5 rounded-full border border-white/10 bg-slate-950/50 backdrop-blur-md shadow-lg">
-            {navItems.map((item, index) => {
+            {navItems.map((item) => {
               const Icon = item.icon;
-              const isActive = index === 0;
+              // Check if it's the exact path or if it's the home page hash link
+              const isActive = item.href === pathname || (item.href === "/" && pathname === "/");
               return (
                 <li key={item.href} className="m-0 p-0">
                   <Link
